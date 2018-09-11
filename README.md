@@ -37,3 +37,7 @@ next things:
  `mv backup/* .`
  
  `rmdir backup`
+ 
+**NOTE:** be careful if you copy .vmdk files for thin disks! best to avoid it because 
+thin disks are sparse files, and copying not within vSphere datastore browser
+will damage them
