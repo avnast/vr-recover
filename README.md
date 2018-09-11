@@ -5,7 +5,12 @@ you somehow lost vCenter and/or Replication Appliance, but still have
 replicated data.
 
 **NO WARRANTIES!!!** Tested only with vSphere 6.5u1 + vSphere Replication 8.1
-
+ 
+Limitations:
+* **replication must be performed without quiescing**
+* VM disk configuration and NVRAM must not be changed between recovery points
+ (is it possible anyway?)
+ 
 Usage:
 
 `python vr-recover.py <folder with replicated VM data>`
@@ -32,8 +37,3 @@ next things:
  `mv backup/* .`
  
  `rmdir backup`
- 
- **LIMITATIONS:**
- * **replication must be performed without quiescing**
- * VM disk configuration and NVRAM must not be changed between recovery points
- (is it possible anyway?) 
